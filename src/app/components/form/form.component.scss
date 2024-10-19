@@ -1,0 +1,117 @@
+form {
+  display: flex;
+  flex-direction: column;
+
+  border: 3px solid var(--light-text);
+  border-radius: 8px;
+
+  width: 1300px;
+
+  margin: 0 auto;
+  padding: 18px;
+  gap: 24px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-header img {
+  height: 32px;
+}
+
+.form-header span {
+  color: var(--light-grey);
+}
+
+.main-form h3 {
+  color: var(--light-grey);
+  font-weight: 300;
+  font-size: 24px;
+  padding: 8px;
+  border-bottom: 1px solid var(--light-text);
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--light-text);
+}
+
+.radio-part {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-part label, .radio-wrapper span {
+  color: var(--light-grey);
+}
+
+.radio-wrapper .hour {
+  margin-left: auto;
+}
+
+.radio-container {
+  margin-top: 8px;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+
+  margin-top: 18px;
+  padding: 8px;
+}
+
+.check-container span {
+  margin-left: auto;
+}
+
+.checkbox {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.checkbox input, label:hover {
+  cursor: pointer;
+}
+
+.buttons-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.buttons-footer button {
+  padding: 14px;
+  color: var(--dark-grey);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 4px;
+
+  width: 25%;
+  transition: all .10s;
+}
+
+.buttons-footer button:hover {
+  cursor: pointer;
+}
+
+.buttons-footer .search-button:hover {
+  background-color: #e8a814;
+}
+
+.search-button {
+  background-color: var(--yellow);
+  border: none;
+}
+.clear-button {
+  background: transparent;
+  border: 1px solid var(--light-text);
+}
