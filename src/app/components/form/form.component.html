@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]="formGroup">
   <div class="form-header">
     <img src="assets/images/png/icon-hour.png" alt="clock">
     <span>Horário</span>
@@ -8,21 +8,21 @@
     <div class="radio-container">
       <div class="radio-wrapper">
         <div class="radio-part">
-          <input type="radio" name="hour" value="morning" id="morning"/>
+          <input type="radio" name="hour" value="morning" id="morning" formControlName="hour"/>
           <label for="morning">Manhã</label>
         </div>
         <span class="hour">06:00 às 12h</span>
       </div>
       <div class="radio-wrapper">
         <div class="radio-part">
-          <input type="radio" name="hour" value="afternoon" id="afternoon"/>
+          <input type="radio" name="hour" value="afternoon" id="afternoon" formControlName="hour"/>
           <label for="afternoon">Tarde</label>
         </div>
         <span class="hour">12:01 às 18h</span>
       </div>
       <div class="radio-wrapper">
         <div class="radio-part">
-          <input type="radio" name="hour" value="night" id="night"/>
+          <input type="radio" name="hour" value="night" id="night" formControlName="hour"/>
           <label for="night">Noite</label>
         </div>
         <span class="hour">18:01 às 23h</span>
@@ -31,15 +31,15 @@
 
     <div class="check-container">
       <div class="checkbox">
-        <input type="checkbox" name="showClosed" id="showClosed"/>
+        <input type="checkbox" name="showClosed" id="showClosed" formControlName="showClosed"/>
         <label for="showClosed">Exibir unidades fechadas</label>
       </div>
-      <span>Resultados encontrados:</span>
+      <span>Resultados encontrados: {{ results.length }}</span>
     </div>
   </div>
 
   <div class="buttons-footer">
-    <button class="search-button">ENCONTAR UNIDADE</button>
-    <button class="clear-button">LIMPAR</button>
+    <button class="search-button" (click)="onSubmit()">ENCONTAR UNIDADE</button>
+    <button class="clear-button" (click)="onClear()">LIMPAR</button>
   </div>
 </form>
